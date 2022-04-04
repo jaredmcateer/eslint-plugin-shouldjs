@@ -1,13 +1,13 @@
 {
   "name": "@jaredmcateer/eslint-plugin-shouldjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A collection of Should-js rules",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "Jared McAteer <jared.mcateer@protonmail.com>",
+  "author": "Jared McAteer <jared.mcateer+npm@gmail.com>",
   "main": "dist/lib/index.js",
   "scripts": {
     "lint": "eslint .",

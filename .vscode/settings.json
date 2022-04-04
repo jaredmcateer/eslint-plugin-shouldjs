@@ -1,0 +1,4 @@
+{
+  "cSpell.words": ["eslintplugin", "jaredmcateer", "shouldjs"],
+  "exportall.config.folderListener": ["/lib/rules"]
+}
