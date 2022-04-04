@@ -1,15 +1,37 @@
 {
-  "name": "eslint-shouldjs-plugin",
-  "version": "0.0.1",
-  "description": "A collection of eslint rules for should-js",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "@jaredmcateer/eslint-plugin-shouldjs",
+  "version": "0.0.0",
+  "description": "A collection of Should-js rules",
   "keywords": [
     "eslint",
-    "shouldjs"
+    "eslintplugin",
+    "eslint-plugin"
   ],
-  "author": "Jared McAteer <jared.mcateer@gmail.com>",
+  "author": "Jared McAteer <jared.mcateer@protonmail.com>",
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "@typescript-eslint/utils": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-plugin": "^4.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  },
+  "engines": {
+    "node": "12.x || 14.x || >= 16"
+  },
+  "peerDependencies": {
+    "eslint": ">=6"
+  },
   "license": "ISC"
 }
