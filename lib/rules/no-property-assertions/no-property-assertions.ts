@@ -37,7 +37,7 @@ export const noPropertyAssertions = createRule<[Options], MessageIds>({
       },
     ],
     hasSuggestions: false,
-    type: "suggestion",
+    type: "problem",
   },
   defaultOptions: [{ name: ["should"] }],
   create(context, [options]) {
