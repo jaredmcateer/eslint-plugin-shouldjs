@@ -6,8 +6,8 @@ export const recommended = {
   parser: "@typescript-eslint/parser",
   parserOptions: { sourceType: "module" },
   rules: {
-    [`@jaredmcateer/${NO_PROPERTY_ASSERTIONS}`]: ["error"],
-    [`@jaredmcateer/${SHOULD_VAR_NAME}`]: ["error"],
+    [`@jaredmcateer/shouldjs/${NO_PROPERTY_ASSERTIONS}`]: ["error"],
+    [`@jaredmcateer/shouldjs/${SHOULD_VAR_NAME}`]: ["error"],
   },
 
   settings: {
