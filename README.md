@@ -47,8 +47,8 @@ Add the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "shouldjs/should-var-name": "error",
-    "shouldjs/no-property-assertions": "error"
+    "@jaredmcateer/shouldjs/should-var-name": "error",
+    "@jaredmcateer/shouldjs/no-property-assertions": "error"
   }
 }
 ```
