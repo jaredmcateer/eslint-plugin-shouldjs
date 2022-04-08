@@ -1,4 +1,6 @@
 # eslint-plugin-shouldjs
+<!-- Jest Coverage Comment:Begin -->
+<!-- Jest Coverage Comment:End -->
 
 Rules that apply to testing with the [should-js](https://shouldjs.github.io/) library.
 
