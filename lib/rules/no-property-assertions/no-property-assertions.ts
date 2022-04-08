@@ -1,18 +1,16 @@
 import { Node } from "@typescript-eslint/types/dist/generated/ast-spec";
 import { AST_NODE_TYPES } from "@typescript-eslint/utils";
 import { RuleContext } from "@typescript-eslint/utils/dist/ts-eslint";
+import { ConfigSettings } from "../../configs";
 import { createRule } from "../../utils/create-rule";
 
 export const NO_PROPERTY_ASSERTIONS = "no-property-assertions";
 export const PROPERTY_ASSERTION_ERROR = "propertyAssertionError";
 
 type MessageIds = typeof PROPERTY_ASSERTION_ERROR;
-interface Options {
-  name?: string[] | ["should"];
-}
-type NoPropertyAssertionContext = RuleContext<MessageIds, [Options]>;
+type NoPropertyAssertionContext = RuleContext<MessageIds, []>;
 
-export const noPropertyAssertions = createRule<[Options], MessageIds>({
+export const noPropertyAssertions = createRule<[], MessageIds>({
   name: NO_PROPERTY_ASSERTIONS,
   meta: {
     docs: {
@@ -23,25 +21,13 @@ export const noPropertyAssertions = createRule<[Options], MessageIds>({
     messages: {
       [PROPERTY_ASSERTION_ERROR]: "Should-js assertions should be methods.",
     },
-    schema: [
-      {
-        type: "object",
-        properties: {
-          name: {
-            type: "array",
-            items: {
-              type: "string",
-            },
-          },
-        },
-      },
-    ],
+    schema: [],
     hasSuggestions: false,
     type: "problem",
   },
-  defaultOptions: [{ name: ["should"] }],
-  create(context, [options]) {
-    const functionVarName = options.name;
+  defaultOptions: [],
+  create(context) {
+    const validVarNames = (context.settings as ConfigSettings).shouldVarNames || ["should"];
     return {
       /**
        * When encountering an MemberExpression with 'should' as a property
@@ -70,7 +56,7 @@ export const noPropertyAssertions = createRule<[Options], MessageIds>({
 
         // If CallExpression isn't an expected variable name then stop here
         const name = node.callee.name;
-        if (!functionVarName?.find((varName) => varName === name)) return;
+        if (!validVarNames?.find((varName) => varName === name)) return;
 
         // CallExpression matches function variable name, begin traversing AST to check.
         checkChain(node.parent, context);

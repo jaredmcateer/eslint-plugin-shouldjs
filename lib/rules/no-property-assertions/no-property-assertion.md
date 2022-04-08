@@ -6,6 +6,8 @@ Disallows ending a should-js chain with a property instead of a method.
 
 Should-js does not use properties for assertions but it is a common gotcha with certain assertions.
 
+When checking by the CallExpression you can configure the `shouldVarNames` in the `settings` property of the eslint config to limit which variable names will be checked.
+
 ## Rule Details
 
 Examples of **incorrect** code for this rule:
@@ -20,18 +22,6 @@ Examples of **correct** code for this rule:
 ```js
 foo.should.be.true();
 should(foo).be.a.String();
-```
-
-### Options
-
-This rule accepts a `name` option, which can be used to specify the variable name(s) given to the variable name when using it in function form:
-
-```js
-{
-  "rules": {
-    "@jaredmcateer/shouldjs/no-property-assertion": ["error", {"name": ["should", "expect"]}]
-  }
-}
 ```
 
 ## When Not To Use It

@@ -14,7 +14,7 @@ ruleTester.run(NO_PROPERTY_ASSERTIONS, noPropertyAssertions, {
     { code: "foo.should.be.true();" },
     { code: "should(foo).be.false();" },
     { code: "foo.should.not.have.been.eql(bar);" },
-    { code: "myCustomVar(foo).should.be.eql(bar);", options: [{ name: ["myCustomVar"] }] },
+    { code: "myCustomVar(foo).should.be.eql(bar);", settings: { shouldVarNames: ["myCustomVar"] } },
   ],
   invalid: [
     { code: "foo.should.be.true;", errors: [{ messageId: PROPERTY_ASSERTION_ERROR }] },
@@ -22,7 +22,7 @@ ruleTester.run(NO_PROPERTY_ASSERTIONS, noPropertyAssertions, {
     { code: "foo.should.not.have.been.eql;", errors: [{ messageId: PROPERTY_ASSERTION_ERROR }] },
     {
       code: "myCustomVar(foo).be.eql;",
-      options: [{ name: ["myCustomVar"] }],
+      settings: { shouldVarNames: ["myCustomVar"] },
       errors: [{ messageId: PROPERTY_ASSERTION_ERROR }],
     },
   ],
