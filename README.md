@@ -26,11 +26,28 @@ Add `@jaredmcateer/shouldjs` to the plugins section of your `.eslintrc` configur
 }
 ```
 
-Then configure the rules you want to use under the rules section.
+## Configuration
+
+### Settings
+
+By default the only allowed variable name for should is `should`, this can be changed by providing an array to `shouldVarNames` in the eslint settings.
+
+```json
+{
+  "settings": {
+    "shouldVarNames": ["should", "expect"]
+  }
+}
+```
+
+### Rules
+
+Add the rules you want to use under the rules section.
 
 ```json
 {
   "rules": {
+    "shouldjs/should-var-name": "error",
     "shouldjs/no-property-assertions": "error"
   }
 }
@@ -48,5 +65,6 @@ Alternative you can use the recommended settings
 
 ## Supported Rules
 
-[no-property-assertion](lib/rules/no-property-assertions/no-property-assertion.md)
+* [should-var-names](lib/rules/should-var-name/should-var-name.md)
+* [no-property-assertion](lib/rules/no-property-assertions/no-property-assertion.md)
 
