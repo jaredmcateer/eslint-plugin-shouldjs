@@ -14,7 +14,7 @@ jobs:
 
       - name: Run tests
         run: |
-          npx jest --coverage --config='{ "coverageReporters": ["json-summary"] }'
+          npm run coverage -- --config='{ "coverageReporters": ["json-summary"] }'
 
       - name: Jest coverage comment
         uses: MishaKav/jest-coverage-comment@main
