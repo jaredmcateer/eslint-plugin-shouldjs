@@ -39,7 +39,7 @@ jobs:
         uses: MishaKav/jest-coverage-comment@main
 
       - name: Prettify code
-        uses: npm run format
+        run: npm run format
 
       - name: Commit formatting changes
         uses: stefanzweifel/git-auto-commit-action@v4
