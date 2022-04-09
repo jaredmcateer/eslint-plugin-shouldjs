@@ -3,6 +3,7 @@
 module.exports = {
   root: true,
   extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  ignorePatterns: ["dist/"],
   env: {
     node: true,
   },
