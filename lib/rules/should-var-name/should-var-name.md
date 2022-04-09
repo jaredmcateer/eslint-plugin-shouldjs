@@ -11,7 +11,7 @@ Given an eslint configurations
 ```js
 {
   settings: {
-    shouldVarNames: ['should']
+    shouldVarNames: ["should"];
   }
 }
 ```
@@ -19,18 +19,17 @@ Given an eslint configurations
 Examples of **incorrect** code for this rule:
 
 ```js
-const expect = require('should');
-import expect from 'should';
+const expect = require("should");
+import expect from "should";
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-const should = require('should');
-import should from 'should';
+const should = require("should");
+import should from "should";
 ```
 
 ## When Not To Use It
 
 It is not recommended to turn this rule off. Other rules in the plugin rely on the variable name when using the should function to decide whether to lint by assigning it an unknown value those rules will not be run.
-
