@@ -65,3 +65,7 @@ Alternative you can use the recommended settings
 
 - [should-var-names](lib/rules/should-var-name/should-var-name.md)
 - [no-property-assertion](lib/rules/no-property-assertions/no-property-assertion.md)
+
+## Acknowledgements
+
+Much of the configuration and learnings of building ESLint Plugins was lifted directly from Darragh ORiordan's article on [How to Write an ESLint Plugin in TypeScript](https://www.darraghoriordan.com/2021/11/06/how-to-write-an-eslint-plugin-typescript/) and [repository](https://github.com/darraghoriordan/eslint-plugin-nestjs-typed). Huge thanks.
