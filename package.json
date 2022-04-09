@@ -30,6 +30,8 @@
     "coverage": "jest --coverage"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "@typescript-eslint/utils": "^5.17.0",
@@ -37,6 +39,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-eslint-plugin": "^4.0.1",
     "eslint-plugin-node": "^11.1.0",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
     "semantic-release": "^19.0.2",
