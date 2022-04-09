@@ -19,12 +19,8 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc -b tsconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint && npm run test",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A .",
-    "postversion": "git push && git push --tags",
     "format": "prettier --write . --config .prettierrc --ignore .prettierignore",
+    "prepare": "husky install",
     "lint": "eslint .",
     "test": "jest",
     "coverage": "jest --coverage"
@@ -61,6 +57,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaredmcateer/eslint-plugin-shouldjs"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "license": "ISC"
 }
