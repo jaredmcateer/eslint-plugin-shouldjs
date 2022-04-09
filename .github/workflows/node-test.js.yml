@@ -4,28 +4,41 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
+    branches: [ main ]
+
+  push:
     branches: [ main ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run test
-    - run: npm run coverage
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Use Node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Run Coverage
+        run: |
+          npm run coverage -- --coverageReporters="json-summary"
+
+      - name: Jest coverage comment
+        uses: MishaKav/jest-coverage-comment@main
+
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.2
+        with:
+          # This part is also where you can pass other options, for example:
+          prettier_options: --write **/*.{ts,json,js,md} --ignore-path .prettierignore"
+          only_changed: true
