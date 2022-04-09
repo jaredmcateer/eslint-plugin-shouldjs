@@ -57,14 +57,11 @@ Alternative you can use the recommended settings
 
 ```json
 {
-  "extends": [
-    "@jaredmcateer/shouldjs:recommended"
-  ]
+  "extends": ["@jaredmcateer/shouldjs:recommended"]
 }
 ```
 
 ## Supported Rules
 
-* [should-var-names](lib/rules/should-var-name/should-var-name.md)
-* [no-property-assertion](lib/rules/no-property-assertions/no-property-assertion.md)
-
+- [should-var-names](lib/rules/should-var-name/should-var-name.md)
+- [no-property-assertion](lib/rules/no-property-assertions/no-property-assertion.md)
