@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout branch
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Use Node 16
         uses: actions/setup-node@v3
@@ -37,8 +39,10 @@ jobs:
         uses: MishaKav/jest-coverage-comment@main
 
       - name: Prettify code
-        uses: creyD/prettier_action@v4.2
+        uses: npm run format
+
+      - name: Commit formatting changes
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          # This part is also where you can pass other options, for example:
-          prettier_options: --write **/*.{ts,json,js,md} --ignore-path .prettierignore"
-          only_changed: true
+          commit_message: Apply formatting changes
+          branch: ${{ github.head_ref }}
