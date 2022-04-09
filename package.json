@@ -11,8 +11,8 @@
     "should-js"
   ],
   "author": "Jared McAteer <jared.mcateer+npm@gmail.com>",
-  "main": "dist/lib/index.js",
-  "types": "dist/lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
