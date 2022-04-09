@@ -10,6 +10,7 @@
   "author": "Jared McAteer <jared.mcateer+npm@gmail.com>",
   "main": "dist/lib/index.js",
   "scripts": {
+    "build": "tsc -b tsconfig.json",
     "lint": "eslint .",
     "test": "jest",
     "coverage": "jest --coverage"
