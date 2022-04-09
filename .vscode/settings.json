@@ -1,4 +1,11 @@
 {
-  "cSpell.words": ["eslintplugin", "jaredmcateer", "shouldjs"],
-  "exportall.config.folderListener": ["/lib/rules"]
+  "cSpell.words": [
+    "eslintplugin",
+    "jaredmcateer",
+    "postversion",
+    "prettierignore",
+    "prettierrc",
+    "preversion",
+    "shouldjs"
+  ]
 }
