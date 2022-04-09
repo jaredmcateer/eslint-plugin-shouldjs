@@ -19,8 +19,7 @@ export const shouldVarName = createRule<[], MessageIds>({
       requiresTypeChecking: false,
     },
     messages: {
-      [INVALID_VAR_NAME]:
-        "Invalid variable name for should-js. Configured variable names: {{names}}",
+      [INVALID_VAR_NAME]: "Invalid variable name for should-js.",
       [SUGGEST_FUNCTION_VAR_RENAME]: "Rename variable to: {{name}}",
     },
     schema: [],
