@@ -10,6 +10,7 @@
   "author": "Jared McAteer <jared.mcateer+npm@gmail.com>",
   "main": "dist/lib/index.js",
   "scripts": {
+    "build": "tsc -b tsconfig.json",
     "format": "prettier --write . --config .prettierrc --ignore .prettierignore",
     "lint": "eslint .",
     "test": "jest",
