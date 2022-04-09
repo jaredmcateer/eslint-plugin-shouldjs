@@ -49,5 +49,15 @@
   "peerDependencies": {
     "eslint": ">=6"
   },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "homepage": "https://github.com/jaredmcateer/eslint-plugin-shouldjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaredmcateer/eslint-plugin-shouldjs"
+  },
   "license": "ISC"
 }
