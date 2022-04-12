@@ -2,7 +2,7 @@
 
 The `"extends": "@jaredmcateer/shouldjs:recommended"` property in a configuration file enables this rule.
 
-Disallows assigning a variable for should that isn't part of the approved list. This is set by the `shouldVarNames` array in settings property of the eslint config.
+Disallows assigning a variable for Should.js that isn't part of the approved list. This is set by the `shouldVarNames` array in settings property of the eslint config.
 
 ## Rule Details
 
@@ -32,4 +32,4 @@ import should from "should";
 
 ## When Not To Use It
 
-It is not recommended to turn this rule off. Other rules in the plugin rely on the variable name when using the should function to decide whether to lint by assigning it an unknown value those rules will not be run.
+It is not recommended to turn this rule off. Other rules in the plugin rely on the variable name when using the Should.js function to decide whether to lint by assigning it an unknown value those rules will not be run.

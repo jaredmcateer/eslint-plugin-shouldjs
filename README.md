@@ -1,6 +1,6 @@
 # eslint-plugin-shouldjs
 
-Rules that apply to testing with the [should-js](https://shouldjs.github.io/) library.
+Rules that apply to testing with the [should.js](https://shouldjs.github.io/) library.
 
 ## Installation
 
@@ -30,7 +30,7 @@ Add `@jaredmcateer/shouldjs` to the plugins section of your `.eslintrc` configur
 
 ### Settings
 
-By default the only allowed variable name for should is `should`, this can be changed by providing an array to `shouldVarNames` in the eslint settings.
+By default the only allowed variable name for Should.js is `should`, this can be changed by providing an array to `shouldVarNames` in the eslint settings.
 
 ```json
 {
@@ -65,6 +65,7 @@ Alternative you can use the recommended settings
 
 - [should-var-names](lib/rules/should-var-name/should-var-name.md)
 - [no-property-assertion](lib/rules/no-property-assertions/no-property-assertion.md)
+- [expect-should-assertion](lib/rules/expect-should-assertion/expect-should-assertions.md)
 
 ## Acknowledgements
 
