@@ -14,6 +14,8 @@ ruleTester.run(NO_PROPERTY_ASSERTIONS, noPropertyAssertions, {
     { code: "foo.should.be.true();" },
     { code: "should(foo).be.false();" },
     { code: "foo.should.not.have.been.eql(bar);" },
+    // This is an error but handled by another rule
+    { code: "should(false);" },
     { code: "myCustomVar(foo).should.be.eql(bar);", settings: { shouldVarNames: ["myCustomVar"] } },
   ],
   invalid: [
