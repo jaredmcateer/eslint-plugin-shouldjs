@@ -14,12 +14,12 @@ export const noPropertyAssertions = createRule<[], MessageIds>({
   name: NO_PROPERTY_ASSERTIONS,
   meta: {
     docs: {
-      description: "Should-js assertions should be methods.",
+      description: "Should.js assertions should be methods.",
       recommended: "error",
       requiresTypeChecking: false,
     },
     messages: {
-      [PROPERTY_ASSERTION_ERROR]: "Should-js assertions should be methods.",
+      [PROPERTY_ASSERTION_ERROR]: "Should.js assertions should be methods.",
     },
     schema: [],
     hasSuggestions: false,
@@ -59,7 +59,7 @@ export const noPropertyAssertions = createRule<[], MessageIds>({
         if (!validVarNames?.find((varName) => varName === name)) return;
 
         if (node.parent?.type === AST_NODE_TYPES.ExpressionStatement) {
-          // If we've hit an Expression statement it means that the should
+          // If we've hit an Expression statement it means that the Should.js
           // function var is being called without an assertion, this is handled
           // by the expect-should-assertion rule.
           return;

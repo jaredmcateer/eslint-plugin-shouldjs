@@ -2,9 +2,9 @@
 
 The `"extends": "@jaredmcateer/shouldjs:recommended"` property in a configuration file enables this rule.
 
-Disallows ending a should-js chain with a property instead of a method.
+Disallows ending a Should.js chain with a property instead of a method.
 
-Should-js does not use properties for assertions but it is a common gotcha with certain assertions.
+Should.js does not use properties for assertions but it is a common gotcha with certain assertions.
 
 When checking by the CallExpression you can configure the `shouldVarNames` in the `settings` property of the eslint config to limit which variable names will be checked.
 

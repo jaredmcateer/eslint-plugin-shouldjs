@@ -38,7 +38,7 @@ export const expectShouldAssertion = createRule<[], MessageIds>({
         const name = node.callee.name;
         if (!validVarNames?.find((varName) => varName === name)) return;
 
-        // If we've hit an Expression statement it means that the should
+        // If we've hit an Expression statement it means that the Should.js
         // function var is being called without an assertion.
         if (node.parent?.type === AST_NODE_TYPES.ExpressionStatement) {
           context.report({

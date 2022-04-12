@@ -14,12 +14,12 @@ export const shouldVarName = createRule<[], MessageIds>({
   name: SHOULD_VAR_NAME,
   meta: {
     docs: {
-      description: "Only allows the configured variable name for should-js variable name.",
+      description: "Only allows the configured variable name for Should.js variable name.",
       recommended: "error",
       requiresTypeChecking: false,
     },
     messages: {
-      [INVALID_VAR_NAME]: "Invalid variable name for should-js.",
+      [INVALID_VAR_NAME]: "Invalid variable name for Should.js.",
       [SUGGEST_FUNCTION_VAR_RENAME]: "Rename variable to: {{name}}",
     },
     schema: [],
@@ -60,7 +60,7 @@ export const shouldVarName = createRule<[], MessageIds>({
       CallExpression(node) {
         if (node?.callee?.type !== AST_NODE_TYPES.Identifier) return;
 
-        // If CallExpression isn't requiring should then stop here
+        // If CallExpression isn't requiring Should.js then stop here
         const isRequire = node.callee.name === "require";
         const isOneArg = isRequire && node.arguments.length === 1;
         const packageArg = isOneArg && node.arguments[0];
@@ -87,7 +87,7 @@ export const shouldVarName = createRule<[], MessageIds>({
       ImportDeclaration(node) {
         if (node?.source?.type !== AST_NODE_TYPES.Literal) return;
 
-        // If ImportDeclaration isn't requiring should then stop here
+        // If ImportDeclaration isn't requiring Should.js then stop here
         if (node.source.value !== "should") return;
         const defaultSpecifier = node.specifiers.find(
           (s) => s.type === AST_NODE_TYPES.ImportDefaultSpecifier
